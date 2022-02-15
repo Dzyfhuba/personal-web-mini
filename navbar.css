@@ -1,0 +1,30 @@
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 1px;
+    overflow: hidden;
+    background-color: var(--black);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 99;
+}
+
+nav li a {
+    display: block;
+    color: var(--yellow-orange);
+    text-align: center;
+    padding: 15px 17px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: var(--jet);
+}

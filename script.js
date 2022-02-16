@@ -24,6 +24,16 @@ var loader = setInterval(function() {
     for (let id = 0; id < 5; id++) {
         past_temp += past.outerHTML;
     }
-    // console.log(past_temp);
     past.outerHTML = past_temp;
+
+    nav_toggle = document.getElementById('toggle');
+
+    contactme = document.getElementById('profile');
+    nav_toggle.addEventListener('change', function() {
+        if (nav_toggle.checked) {
+            document.querySelector('nav ul').classList.remove('hide');
+        } else {
+            document.querySelector('nav ul').classList.add('hide');
+        }
+    });
 }, 1000);

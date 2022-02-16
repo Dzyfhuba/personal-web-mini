@@ -15,6 +15,7 @@ nav ul {
     display: flex;
     justify-content: flex-end;
     z-index: 99;
+    transition: .5s;
 }
 
 nav li a {
@@ -26,4 +27,101 @@ nav li a {
 
 nav li a:hover {
     background-color: var(--jet);
+}
+
+input {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    nav aside {
+        display: flex !important;
+    }
+    nav #email {
+        text-align: center;
+    }
+    nav #github {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        right: 0;
+        background-color: var(--jet);
+        height: 100%;
+        justify-content: flex-start;
+        border-color: var(--jet);
+        border-style: solid;
+        transition: .5s ease-in-out;
+    }
+    nav ul a {
+        text-align: left;
+    }
+    nav li a:hover {
+        background-color: var(--black);
+        border-color: var(--yellow-orange);
+        border-style: solid;
+    }
+    #nav-toggle .menu {
+        position: fixed;
+        right: -100px;
+        top: -100px;
+        z-index: 100;
+        width: 200px;
+        height: 200px;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
+    #nav-toggle .hamb {
+        position: absolute;
+        top: 135px;
+        left: 50px;
+        width: 30px;
+        height: 2px;
+        background: var(--yellow-orange);
+        display: block;
+        transform-origin: center;
+        transition: .5s ease-in-out;
+    }
+    #nav-toggle .hamb:after,
+    #nav-toggle .hamb:before {
+        transition: .5s ease-in-out;
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: var(--yellow-orange);
+    }
+    #nav-toggle .hamb:before {
+        top: -10px;
+    }
+    #nav-toggle .hamb:after {
+        bottom: -10px;
+    }
+    #nav-toggle input {
+        display: none;
+    }
+    #nav-toggle input:checked+.menu {
+        transform: translate(-300px, 0);
+    }
+    #nav-toggle input:checked+.menu .hamb {
+        transform: rotate(45deg);
+    }
+    #nav-toggle input:checked+.menu .hamb:after {
+        transform: rotate(90deg);
+        bottom: 0;
+    }
+    #nav-toggle input:checked+.menu .hamb:before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+    .hide {
+        /* transform: translateX(100%); */
+        transform: translate(100%, 0);
+        transition: .5s ease-in-out;
+    }
 }

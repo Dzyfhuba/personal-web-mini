@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hafidz Ubaidillah's Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -14,8 +14,14 @@
 
 <body lang="id">
     <header id="navbar">
+        <label id="nav-toggle">
+            <input type="checkbox" id="toggle">
+            <span class="menu">
+                <span class="hamb"></span>
+            </span>
+        </label>
         <nav>
-            <ul>
+            <ul class="hide" style="overflow: scroll;">
                 <li>
                     <a href="#description">Deskripsi</a>
                 </li>
@@ -27,6 +33,21 @@
                 </li>
                 <li>
                     <a href="#contactme">Kontak Kami</a>
+                </li>
+                <li>
+                    <aside id="contactme" style="display: none;">
+                        <div id="profile" style="margin: 10px;">
+                            <h2>Kontak Saya</h2>
+                            <img id="photo" src="my-photo.png" alt="Hafidz Ubaidillah">
+                            <h3 id="name">Hafidz Ubaidillah</h3>
+                            <p id="activity">Sedang Menempuh Kuliah di Universitas Muhammadiyah Gresik</p>
+                            <a id="email" href="mailto:hafidz21ub@gmail.com" style="text-decoration: none;">hafidz21ub@gmail.com</a>
+                            <div id="github">
+                                <label for="my-github">Github: </label>
+                                <a id="my-github" href="https://github.com/Dzyfhuba" target="_blank">@Dzyfhuba</a>
+                            </div>
+                        </div>
+                    </aside>
                 </li>
             </ul>
         </nav>
@@ -83,7 +104,7 @@
             <article id="previousproject">
                 <h2>Project Sebelumnya</h2>
                 <div id="past">
-                    <div id="past-title">Project Title</div>
+                    <h3 id="past-title">Project Title</h3>
                     <div id="past-description">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Semper quis lectus nulla at volutpat diam ut venenatis tellus.
                         Felis eget velit aliquet sagittis id consectetur purus.
@@ -112,7 +133,8 @@
         </aside>
     </main>
     <footer>
-        <p>2022 | website ini dibuat oleh <a href="https://github.com/Dzyfhuba" target="_blank">Hafidz Ubaidillah</a></p>
+        <p>2022 | website ini dibuat oleh <a href="https://github.com/Dzyfhuba" target="_blank">Hafidz Ubaidillah</a>
+        </p>
     </footer>
 </body>
 

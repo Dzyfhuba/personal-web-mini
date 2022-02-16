@@ -44,3 +44,7 @@ article#previousproject h2 {
 #other-past:active {
     background-color: var(--black);
 }
+
+#past-description {
+    margin: 10px 0;
+}

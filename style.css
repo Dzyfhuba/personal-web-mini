@@ -3,6 +3,13 @@
 @import './navbar.css';
 @import './main.css';
 @import './description.css';
+@import './inprogress.css';
+@import './previousproject.css';
+@import './contactme.css';
+* {
+    color: var(--yellow-orange);
+}
+
 body {
     background-color: var(--black);
     font-family: sans-serif;
@@ -12,4 +19,12 @@ body {
 
 .my-photo {
     width: 100%;
+}
+
+article h2 {
+    margin: 0;
+}
+
+footer {
+    text-align: center;
 }

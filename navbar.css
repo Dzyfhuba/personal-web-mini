@@ -19,7 +19,6 @@ nav ul {
 
 nav li a {
     display: block;
-    color: var(--yellow-orange);
     text-align: center;
     padding: 15px 17px;
     text-decoration: none;

@@ -36,4 +36,24 @@ var loader = setInterval(function() {
             document.querySelector('nav ul').classList.add('hide');
         }
     });
+
+    const showOnPx = window.screen.height;
+    const backToTopButton = document.querySelector(".back-to-top")
+
+    const scrollContainer = () => {
+        return document.documentElement || document.body;
+    };
+    backToTopButton.addEventListener("click", () => {
+        // scrollContainer().scrollTop = 0;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.addEventListener("scroll", () => {
+        if (scrollContainer().scrollTop > showOnPx) {
+            backToTopButton.setAttribute("style", "display:block");
+        } else {
+            backToTopButton.setAttribute("style", "display:none");
+        }
+    })
+
 }, 1000);
